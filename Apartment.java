@@ -11,10 +11,9 @@ class Apartment
         listOfUsers_ = new ArrayList<>();
     }
 
-    public void addUser(User u) 
+    public void addUser(String name) 
     {
-        // TODO calling 
-        listOfUsers_.add(u);
+        listOfUsers_.add(new User(name));
     }
 
     public int removeUser(int index)
@@ -31,19 +30,24 @@ class Apartment
 
     public void printUsers()
     {
-        System.out.println("Users:\n");
-        if (listOfUsers_.size() == 0)
-        {
-            System.out.println("There are no users in this apartment!\n");
-        }
-        else
-        {
-            for (User u : listOfUsers_)
-            {
-                System.out.println("Name: " + u.getName() + " money: " + u.getMoney() + "\n");
-            }
-        }
-    }
+		System.out.println("Users:\n");
+		if (listOfUsers_.size() == 0)
+		{
+			System.out.println("There are no users in this apartment!\n");
+		}
+		else
+		{
+			for (User u : listOfUsers_)
+			{
+				System.out.println("Name: " + u.getName() + " money: " + u.getMoney() + "\n");
+			}
+		}
+	}
+
+	public int numberOfUsers()
+	{
+		return listOfUsers_.size();
+	}
 
     void calculateDebths()
     {
