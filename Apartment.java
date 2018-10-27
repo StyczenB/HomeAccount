@@ -14,8 +14,8 @@ class Apartment
     public void addUser(String name) 
     {
         listOfUsers_.add(new User(name));
-    }
-
+	}
+	
     public int removeUser(int index)
     {
         if (listOfUsers_.size() == 0)
@@ -30,17 +30,18 @@ class Apartment
 
     public void printUsers()
     {
-		System.out.println("Users:\n");
+		System.out.println("Users:");
 		if (listOfUsers_.size() == 0)
 		{
-			System.out.println("There are no users in this apartment!\n");
+			System.out.println("\tThere are no users in this apartment!\n");
 		}
 		else
 		{
-			for (User u : listOfUsers_)
+			for (int i = 0; i < listOfUsers_.size(); ++i)
 			{
-				System.out.println("Name: " + u.getName() + " money: " + u.getMoney() + "\n");
+				System.out.println("\t" + i + ". Name: " + listOfUsers_.get(i).getName() + ", money: " + listOfUsers_.get(i).getMoney() / 100.0 + " zl");
 			}
+			System.out.println();
 		}
 	}
 
