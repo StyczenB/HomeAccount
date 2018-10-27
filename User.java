@@ -16,8 +16,8 @@ class User
 	{
 		return moneyPaidGr_;
 	}
-	public int getName()
+	public String getName()
 	{
-		return name;
+		return name_;
 	}
 }
