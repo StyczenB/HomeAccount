@@ -54,4 +54,13 @@ class Apartment
     {
 
     }
+	int pay(float amount, int index)
+	{
+		if (index<listOfUsers_.size())
+		{	
+			listOfUsers_.get(index).addMoney(amount);
+			return 0;
+		}
+		else return 1;
+	}
 }

@@ -7,10 +7,10 @@ public class HomeAccountApplication
 		int dummy = 0;
 		int n = -1;
 		Apartment apartment = new Apartment();
-		while (n != 0)
+		while (true)
 		{
 			
-			System.out.print("\n\nObecnie zarejestrowanych jest " +dummy+" użytkowników\n0. Wyjdź z programu\n1. Pokaż listę użytkowników\n2. Dodaj użytkownika\n");
+			System.out.print("\n\nObecnie zarejestrowanych jest " + apartment.numberOfUsers()+" użytkowników\n0. Wyjdź z programu\n1. Pokaż listę użytkowników\n2. Dodaj użytkownika\n");
 			n=cin.nextInt();
 			cin.skip("\n");
 			switch(n)
@@ -21,6 +21,8 @@ public class HomeAccountApplication
 				{
 					apartment.printUsers();
 					break;
+					
+					
 				}
 				case 2:
 				{
@@ -29,6 +31,9 @@ public class HomeAccountApplication
 					apartment.addUser(name);
 					break;
 				}
+				case 3:
+					apartment.pay((float)10.5, 1);
+					break;
 			}
 		}
 	}
