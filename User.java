@@ -16,4 +16,8 @@ class User
 	{
 		return moneyPaidGr_;
 	}
+	public int getName()
+	{
+		return name;
+	}
 }
