@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-
 class Apartment
 {
     ArrayList<User> listOfUsers_; 
@@ -51,9 +50,21 @@ class Apartment
 	}
 
     void calculateDebths()
-    {
-
-    }
+	{
+		int average = 0;
+		for (int i =0; i< listOfUsers_.size(); i++)
+		{
+			average+=listOfUsers_.get(i).getMoney();
+		}
+		average/=listOfUsers_.size();
+		int [] debt = new int [listOfUsers_.size()];
+		for (int i = 0; i < listOfUsers_.size(); i++)
+		{
+			debt[i] = listOfUsers_.get(i).getMoney() - average;
+		}
+		
+		
+	}
 	int pay(float amount, int index)
 	{
 		if (index<listOfUsers_.size())
@@ -64,3 +75,7 @@ class Apartment
 		else return 1;
 	}
 }
+
+
+
+
