@@ -1,10 +1,8 @@
 class User
 {
-private:
 	String name_;
 	int moneyPaidGr_;
-
-public:
+	User(){}
 	User(String name)
 	{
 		name_ = name;
@@ -14,7 +12,7 @@ public:
 	{
 		moneyPaidGr_ += 100*amount;
 	}
-	public void getMoney()
+	public int getMoney()
 	{
 		return moneyPaidGr_;
 	}
