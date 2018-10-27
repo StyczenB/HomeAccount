@@ -18,6 +18,6 @@ class User
 	}
 	public String getName()
 	{
-		return name;
+		return name_;
 	}
 }
